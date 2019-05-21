@@ -28,7 +28,7 @@ export function loadCourses() {
       .getCourses()
       .then(courses => {
         console.log(courses);
-        dispatch(loadCourseSuccess(courses));
+        dispatch(loadCourseSuccess(courses.data));
       })
       .catch(error => {
         dispatch(apiCallError(error));
