@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "prop-types": "15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
@@ -11,7 +13,6 @@
     "react-toastify": "^5.1.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "prop-types": "15.7.2",
     "reselect": "4.0.0"
   },
   "devDependencies": {
@@ -22,7 +23,7 @@
     "webpack-dev-server": "3.2.1"
   },
   "scripts": {
-    "start": "react-scripts start start:api",
+    "start": "react-scripts start ",
     "build": "react-scripts build",
     "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
     "prestart:api": "node BackEndAPI/createMockDb.js",

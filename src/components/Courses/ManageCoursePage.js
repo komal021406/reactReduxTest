@@ -4,7 +4,7 @@ import { loadCourses, saveCourse } from "../../store/actions/courseActions";
 import { loadAuthors } from "../../store/actions/authorActions";
 import PropTypes from "prop-types";
 import CourseForm from "./CourseForm";
-import { newCourse } from "../../../BackEndAPI/mockData";
+import { newCourse } from "../../BackEndAPI/mockData";
 import Spinner from "../shared/Spinner";
 import { toast } from "react-toastify";
 
@@ -65,7 +65,7 @@ function ManageCoursePage({
     saveCourse(course)
       .then(() => {
         toast.success("Course saved.");
-        history.push("/courses");
+        history.push("/Courses");
       })
       .catch(error => {
         setSaving(false);

@@ -23,8 +23,8 @@ class App extends Component {
     <Route exact path = "/" component ={HomePage}/>
     <Route path = "/About" component ={AboutPage}/>
     <Route path = "/Courses" component ={CoursePage}/>
-    <Route path="/course/:slug" component={ManageCoursePage} />
-    <Route path="/course" component={ManageCoursePage} /> 
+    <Route path="/course/:slug" component={ManageCoursePage} /> 
+     <Route path="/course" component={ManageCoursePage} /> 
     </Switch>
   
      

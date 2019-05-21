@@ -8,12 +8,20 @@ import CourseList from "./CourseList";
 import { Redirect } from "react-router-dom";
 import Spinner from "../shared/Spinner";
 import { toast } from "react-toastify";
+import axios from 'axios';
+
+
 class CoursesPage extends React.Component {
   state = {
     redirectToAddCoursePage: false
   };
 
   componentDidMount() {
+    axios.get("http://localhost:3001/courses").then(res=>{
+      console.log(res)
+    });
+
+    // debugger;
     const { courses, authors, actions } = this.props;
     console.log(this.props);
   
@@ -52,7 +60,7 @@ class CoursesPage extends React.Component {
 //   this.props.actions.createCourse(this.state.course);
 // };
   render() {
- 
+    // debugger;
     return (
 
       <>
@@ -61,6 +69,7 @@ class CoursesPage extends React.Component {
       {this.props.loading ? (
         <Spinner />
       ) : (
+        
         <>
           <button
             style={{ marginBottom: 20 }}
@@ -106,6 +115,7 @@ CoursesPage.propTypes = {
 };
 
 function mapStateToProps(state) {
+  console.log(state);
   return { courses:
     state.authors.length === 0
       ? []
