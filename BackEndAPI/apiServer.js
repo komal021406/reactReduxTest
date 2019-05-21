@@ -4,16 +4,14 @@ const path = require("path");
 const router = jsonServer.router(path.join(__dirname, "db.json"));
 
 
-const middlewares = jsonServer.defaults({
-  static: "node_modules/json-server/dist"
-});
+const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
 
 server.use(jsonServer.bodyParser);
 
 server.use(function(req, res, next) {
-  setTimeout(next, 0);
+  setTimeout(next, 2000);
 });
 
 server.use((req, res, next) => {
@@ -28,7 +26,7 @@ server.post("/courses/", function(req, res, next) {
   if (error) {
     res.status(400).send(error);
   } else {
-    req.body.slug = createSlug(req.body.title); // Generate a slug for new courses.
+    req.body.slug = createSlug(req.body.title); 
     next();
   }
 });
