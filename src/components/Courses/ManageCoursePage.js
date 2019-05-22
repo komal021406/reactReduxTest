@@ -38,8 +38,12 @@ function ManageCoursePage({
   }, [props.course]);
 
   function handleChange(event) {
+    console.log('change');
     const { name, value } = event.target;
-    setCourse(prevCourse => ({
+    console.log({name, value});
+    setCourse(prevCourse => (
+
+      {
       ...prevCourse,
       [name]: name === "authorId" ? parseInt(value, 10) : value
     }));
@@ -59,9 +63,11 @@ function ManageCoursePage({
   }
 
   function handleSave(event) {
+    console.log('save');
     event.preventDefault();
     if (!formIsValid()) return;
     setSaving(true);
+    console.log(course);
     saveCourse(course)
       .then(() => {
         toast.success("Course saved.");
@@ -98,6 +104,7 @@ ManageCoursePage.propTypes = {
 };
 
 export function getCourseBySlug(courses, slug) {
+
   return courses.find(course => course.slug === slug) || null;
 }
 
@@ -107,6 +114,7 @@ function mapStateToProps(state, ownProps) {
     slug && state.courses.length > 0
       ? getCourseBySlug(state.courses, slug)
       : newCourse;
+      console.log(course)
   return {
     course,
     courses: state.courses,

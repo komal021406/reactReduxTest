@@ -44,6 +44,7 @@ export function saveCourse(course) {
     return courseApi
       .saveCourse(course)
       .then(savedCourse => {
+        console.log(course.id)
         course.id
           ? dispatch(updateCourseSuccess(savedCourse))
           : dispatch(createCourseSuccess(savedCourse));

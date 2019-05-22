@@ -13,19 +13,24 @@ export function getCourses() {
 
 export function saveCourse(course) {
   console.log("server")
-  return fetch(baseUrl + (course.id || ""), {
-    method: course.id ? "PUT" : "POST", 
-    headers: { "content-type": "application/json",
-    "Accept": "application/json"
-   },
-    body: JSON.stringify(course)
-  })
-    .then(handleResponse)
-    .catch(handleError);
+  console.log(course);
+  course.id = 100;
+
+  return axios.get("http:localhost:3001/courses/100")
+  // , {
+  //   method: course.id ? "PUT" : "POST", 
+  //   headers: { "content-type": "application/json",
+  //   "Accept": "application/json"
+  //  },
+  //   body: JSON.stringify(course)
+  // })
+  //   .then(handleResponse)
+  //   .catch(handleError);
 }
 
 export function deleteCourse(courseId) {
-  return fetch(baseUrl + courseId, { method: "DELETE" })
+  return axios.get("http://localhost:3001" + courseId, {method: "DELETE"})
+  // return fetch(baseUrl + courseId, { method: "DELETE" })
     .then(handleResponse)
     .catch(handleError);
 }
