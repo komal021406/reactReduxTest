@@ -23,7 +23,7 @@
     "webpack-dev-server": "3.2.1"
   },
   "scripts": {
-    "start": "react-scripts start ",
+    "start": "react-scripts start start:api",
     "build": "react-scripts build",
     "start:dev": "webpack-dev-server --config webpack.config.dev.js --port 3000",
     "prestart:api": "node BackEndAPI/createMockDb.js",
