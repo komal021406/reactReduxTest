@@ -3,8 +3,28 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Available Scripts
 
 In the project directory, you can run:
+### `node apiServer.js`
+The above command must run from BackEndAPi directory.
+Runs the API at [http://localhost:3001]
 
 ### `npm start`
+The above command runs on project directory.
+App runs on seperate server.
+
+***************************************************************************************************************
+
+Currently, app shows the list od data in Course route. 
+Delete button works well. 
+Next development step=> Save Button.
+
+
+
+
+
+
+
+
+//Default Notes
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
