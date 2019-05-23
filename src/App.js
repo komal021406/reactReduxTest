@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 import {Route, Switch} from "react-router-dom";
-
-
 import HomePage from './components/Home/HomePage';
 import AboutPage from './components/About/AboutPage';
 import CoursePage from './components/Courses/CoursePage';
@@ -16,7 +14,7 @@ class App extends Component {
   render(){
   
   return (
-    
+  
     <div className="App">
    <Header/>
       <Switch>
@@ -26,8 +24,6 @@ class App extends Component {
     <Route path="/course/:slug" component={ManageCoursePage} /> 
      <Route path="/course" component={ManageCoursePage} /> 
     </Switch>
-  
-     
       </div>
   );
 }

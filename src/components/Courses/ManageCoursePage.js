@@ -42,7 +42,6 @@ function ManageCoursePage({
     const { name, value } = event.target;
     console.log({name, value});
     setCourse(prevCourse => (
-
       {
       ...prevCourse,
       [name]: name === "authorId" ? parseInt(value, 10) : value

@@ -17,16 +17,6 @@ const CourseList = ({ courses, onDeleteClick  }) => (
         return (
           <tr key={course.id}>
             <td>
-              {/* <a
-                className="btn btn-light"
-                href={"https://www.google.com/" + course.slug}
-
-                // href={"http://pluralsight.com/courses/" + course.slug}
-              >
-                Watch
-              </a> */}
-            </td>
-            <td>
               <Link to={"/course/" + course.slug}>{course.title}</Link>
             </td>
             <td>{course.authorName}</td>

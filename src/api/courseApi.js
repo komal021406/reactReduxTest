@@ -4,9 +4,7 @@ const baseUrl = "http:localhost:3001" + "/courses/";
 
 export function getCourses() {
   console.log(baseUrl)
-  // let data;
   return axios.get("http://localhost:3001/courses")
-  // return fetch(baseUrl)
     // .then(handleResponse)
     // .catch(handleError);
 }
