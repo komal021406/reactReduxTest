@@ -3,7 +3,7 @@ const server = jsonServer.create();
 const path = require("path");
 const router = jsonServer.router(path.join(__dirname, "db.json"));
 
-//testing api1
+//testing api1/////
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
